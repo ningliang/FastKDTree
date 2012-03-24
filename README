@@ -1,0 +1,25 @@
+Fast KD Tree in javascript, based on Duyn's java version.
+
+  http://robowiki.net/wiki/User:Duyn/kd-tree_Tutorial
+  http://en.wikipedia.org/wiki/K-d_tree
+
+Usage:
+
+  var nodes = [
+    { data: "A", coords: [1, 2]}, 
+    { data: "B", coords: [4, 5]},
+    { data: "C", coords: [9, 10]}
+  ];
+  var tree = new FastKDTree();
+  tree.add_all(nodes);
+  
+  var k = 2;
+  var query = [2, 2];
+  var nearest_points = tree.k_nearest(query, 2);
+
+Notes
+
+  - The "data" entry in each node can be arbitrary
+  - The tree uses Euclidean distance for finding the k nearest neighbors
+
+Contributions welcome!

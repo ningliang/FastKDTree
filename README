@@ -6,20 +6,24 @@ Fast KD Tree in javascript, based on Duyn's java version.
 Usage:
 
   var nodes = [
-    { data: "A", coords: [1, 2]}, 
+    { data: "A", coords: [1, 2]},
     { data: "B", coords: [4, 5]},
     { data: "C", coords: [9, 10]}
   ];
   var tree = new FastKDTree();
   tree.add_all(nodes);
-  
+
   var k = 2;
   var query = [2, 2];
   var nearest_points = tree.k_nearest(query, 2);
 
 Notes
 
-  - The "data" entry in each node can be arbitrary
+  - The "data" key in each node can have an arbitrary value
   - The tree uses Euclidean distance for finding the k nearest neighbors
+  - The search state uses a simple array instead of a heap - there is an optimization here
 
 Contributions welcome!
+
+Thanks,
+Ning

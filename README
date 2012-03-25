@@ -20,6 +20,7 @@ Usage:
 Notes
 
   - The "data" key in each node can have an arbitrary value
+  - "coords" are length N arrays (N constant for a given tree)
   - The tree uses Euclidean distance for finding the k nearest neighbors
   - The search state uses a simple array instead of a heap - there is an optimization here
 
